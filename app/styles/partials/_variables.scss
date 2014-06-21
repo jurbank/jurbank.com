@@ -1,11 +1,15 @@
 $sans-font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $serif-font-family: 'Merriweather', serif;
 
-
-$global-padding: 2em;
-
-$grey: #191919;
+$grey: #2d2d2d;
 $teal: #86d1a4;
 
 $secondary-color: $grey;
 $link-color: $teal;
+
+$break-point-sm: 35.5em;
+$break-point-md: 48em;
+$break-point-lg: 64em;
+$break-point-xl: 80em;
+
+$global-padding: 2em;
