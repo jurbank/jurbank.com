@@ -21,7 +21,7 @@ nav {
   
   .line {
     display:block;
-    background: lighten($grey, 40%);
+    background: rgba(0, 0, 0, 0.7);
     width:$nav-width-line;
     height:$nav-height-line;
     position:absolute;
