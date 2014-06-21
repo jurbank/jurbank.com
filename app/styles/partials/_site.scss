@@ -14,6 +14,20 @@ body {
   font-family: $sans-font-family;
   // color: #333;
   line-height: 1.5em;
+  background: $grey;
+}
+
+body,
+h1,
+h3,
+p {
+	@include respond-to(max-width, $break-point-sm) {
+		font-size: .89em;
+	}
+		@include respond-to(min-width, $break-point-xl) {
+		font-size: 1.2em;
+		line-height: 1.5em;
+	}
 }
 
 a {
@@ -30,26 +44,9 @@ ul {
 	}
 }
 
-h1 {
-	color: #fff;
-	font-size: 4em;
-	margin: 0;
-	line-height: 1em;
-	font-family: $sans-font-family;
-	span {
-		margin-top: 1em;
-		display: block;
-		font-size: .25em;
-		color: darken(#fff, 25%);
-		line-height: 1.8em;
-		font-weight: lighter;
-	}
-}
-
-h3 {
-	color: lighten($grey, 50%);
-	letter-spacing: .1em;
-	font-family: $sans-font-family;
+hr {
+	margin-bottom: 5%;
+	border: 1px lighten($grey, 3%) solid;
 }
 
 .pure-g {
@@ -58,6 +55,9 @@ h3 {
   box-sizing: border-box;
   margin-bottom: 3%;
 	> div {
+		@include respond-to(max-width, $break-point-sm) {
+			padding: 0;
+		}
 		padding: 0 2%;
 			&:first-child {
 			padding-left: 0;
@@ -68,6 +68,40 @@ h3 {
 	}
 }
 
+h1 {
+	color: #fff;
+	font-size: 4em;
+	margin: 0;
+	line-height: 1em;
+	font-family: $sans-font-family;
+	letter-spacing: -.05em;
+	span {
+		margin-top: 1em;
+		display: block;
+		font-size: .36em;
+		color: darken(#fff, 25%);
+		line-height: 1.5em;
+		letter-spacing: -.03em;
+	}
+}
+
+h3 {
+	color: lighten($grey, 50%);
+	font-family: $sans-font-family;
+	margin-bottom: .5em;
+}
+
+canvas {
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+}
+
 // SECTIONS
 // ---------------------------------
 
@@ -75,16 +109,15 @@ h3 {
 .container {
 	max-width: 90%;
 	margin: 0 auto;
-	padding: 4% 0;
+	padding: 5% 0;
 }
 
 .group-top {
-	background: $grey;
 	h3 {
 		color: #fff;
 	}
 	p {
-		color: lighten($grey, 39%);
+		color: lighten($grey, 30%);
 		&.subheader {
 			color: #fff;
 		}
@@ -95,7 +128,26 @@ h3 {
 	}
 }
 
-.about {
-	margin: 0 0 15%;
+.group-bottom {
+	background: #fff;
+	h3 {
+		color: $grey;
+	}
+	p {
+		color: lighten($grey, 30%);
+		&.subheader {
+			color: $grey;
+		}
+		strong {
+			display: block;
+			margin-bottom: 1.5%;
+		}
+	}
 }
+
+.about {
+	margin: 0 0 9%;
+}
+
+
 

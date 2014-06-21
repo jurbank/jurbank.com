@@ -25,6 +25,16 @@
 
 
 
+@mixin respond-to($type, $query) {
+  @media ($type: $query) {
+    @content;
+  }
+}
+
+@function reduce-by-ten($val) {
+  @return $val - ($val * 0.10);
+}
+
 
 
 

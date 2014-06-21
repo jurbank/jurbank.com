@@ -10,6 +10,18 @@ $link-color: $teal;
 $break-point-sm: 35.5em;
 $break-point-md: 48em;
 $break-point-lg: 64em;
-$break-point-xl: 80em;
+$break-point-xl: 95em;
 
 $global-padding: 2em;
+
+// navigation
+$nav-background: #3d566e;
+
+$nav-height-icon: 16px;
+$nav-width-line: 30px;
+$nav-height-line: 3px;
+
+$nav-transition-time: .1s;
+$nav-rotation: 45deg;
+$nav-translateY: ($nav-height-icon / 2);
+$nav-translateX: 0;
