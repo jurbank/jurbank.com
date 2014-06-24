@@ -13,7 +13,7 @@ body {
 	margin: 0;
   font-family: $sans-font-family;
   // color: #333;
-  line-height: 1.5em;
+  line-height: 1.6em;
   background: $grey;
 }
 
@@ -21,6 +21,7 @@ body,
 h1,
 h3,
 p {
+	font-family: $sans-font-family;
 	@include respond-to(max-width, $break-point-sm) {
 		font-size: .89em;
 	}
@@ -102,6 +103,45 @@ canvas {
 
 }
 
+nav {
+	@include respond-to(max-width, $break-point-md) {
+		background: rgba(45, 45, 45, 0.9);
+		top: 0;
+		right: 0;
+		width: 60%;
+		height: 100%;
+		font-size: 1.2em;		
+	}
+	position: fixed;
+	top: 1em;
+	right: 8em;
+	padding: 0 2em;
+	z-index: 1;
+	display: none;
+	&.active {
+		display: block;
+	}	
+	a {
+		text-transform: uppercase;
+		text-decoration: none;
+		line-height: 2em;
+	}
+	.external {
+		@for $i from 1 through length($soc-colors) {
+			li:nth-child(#{$i}) a {
+				color: unquote(nth($soc-colors, $i));
+			}
+		}
+	}
+}
+
+.hamburger-icon__container {
+	z-index: 2;
+}
+#navigation {
+
+}
+
 // SECTIONS
 // ---------------------------------
 
@@ -109,7 +149,8 @@ canvas {
 .container {
 	max-width: 90%;
 	margin: 0 auto;
-	padding: 5% 0;
+	padding: 2em 0;
+	position: relative;
 }
 
 .group-top {

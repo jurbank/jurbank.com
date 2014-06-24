@@ -21,11 +21,12 @@
 // }
 
 $(document).ready(function() {
-    var hamburger = $('#hamburger-icon');
+    var hamburger = $('#hamburger-icon'),
+        nav = $('#navigation');
+
     hamburger.click(function() {
         hamburger.toggleClass('active');
+        nav.toggleClass('active');
         return false;
     });
 });
-
-

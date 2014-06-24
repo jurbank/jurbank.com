@@ -1,14 +1,11 @@
 
 
-nav {
-  @include respond-to(max-width, $break-point-sm) {
-    background: rgba(0, 0, 0, 0.1);
-  }  
+.hamburger-icon__container { 
   margin-top: 0.5em;
   position: fixed;
   right: 5%; 
   // height: $nav-height-icon;
-  width: $nav-width-line * 1.4;
+  width: $nav-width-line;
   font-size: 0;
 }
 
@@ -40,16 +37,7 @@ nav {
     }
   }
   &:hover, &:focus {
-     .line-1 {
-        transform: translateY($nav-height-line / 2 * -1);
-        -webkit-transform: translateY($nav-height-line / 2 * -1);
-        -moz-transform: translateY($nav-height-line / 2 * -1);
-     }
-    .line-3 {
-        transform: translateY($nav-height-line / 2);
-        -webkit-transform: translateY($nav-height-line / 2);
-        -moz-transform: translateY($nav-height-line / 2);
-    }  
+    opacity: 0.5; 
   }
   &.active {
     .line-1 {
