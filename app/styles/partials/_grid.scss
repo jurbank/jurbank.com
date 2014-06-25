@@ -1,0 +1,39 @@
+$gutter: 10;
+$columns: 12;
+
+@function col-width($colNum, $totalCols) {
+  @return percentage(($colNum / $totalCols));
+}
+
+@mixin row {
+	letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
+	text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
+
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -webkit-flex-flow: row wrap;  
+  -ms-flex-flow: row wrap;  
+}
+
+@mixin col($cols, $last:false){
+  display: inline-block;
+  zoom: 1;
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  text-rendering: auto;
+
+ 	width: col-width($cols, $columns);
+}
+
+
+.j-grid {
+	@include row;
+}
+
+.j-column {
+	@include col(3);
+	background: #f00;
+	height: 100px;
+}
+
