@@ -191,4 +191,22 @@ nav {
 }
 
 
+// ANOMATION
+// -----------------------------
+
+@for $i from 1 through 3 {
+	.anim-fade-in-#{$i} {
+		animation: fade-in #{$i}s ease-in;
+	}
+
+	@-webkit-keyframes fade-in {
+	  from {
+	    opacity: 0;
+	  }
+	  
+	  to {
+	    opacity: 1;
+	  }
+	}
+}
 
