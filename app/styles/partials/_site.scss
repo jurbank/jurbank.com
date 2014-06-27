@@ -36,7 +36,6 @@ a {
 }
 
 ul {
-	list-style: none;
 	padding-left: 0;
 	li {
 		padding-left: 0;
@@ -68,6 +67,24 @@ hr {
 		}
 	}
 }
+
+
+.row {
+  margin-bottom: 3%;
+	> div {
+		@include respond-to(max-width, $break-point-sm) {
+			padding: 0;
+		}
+		padding: 0 2%;
+			&:first-child {
+			padding-left: 0;
+		}
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+}
+
 
 h1 {
 	color: #fff;
@@ -157,9 +174,11 @@ nav {
 .group-top {
 	h3 {
 		color: #fff;
+		margin-bottom: 1.2em;
 	}
 	p {
 		color: lighten($grey, 30%);
+		margin-top: .5em;
 		&.subheader {
 			color: #fff;
 		}
@@ -168,6 +187,18 @@ nav {
 			margin-bottom: 1.5%;
 		}
 	}
+}
+
+.project {
+	a {
+		text-decoration: none;
+		color: #fff;		
+		transition: color .25s ease-in;
+		padding: 1em 0 0.5em;
+		&:hover {
+			color: $teal;			
+		}
+	}	
 }
 
 .group-bottom {
@@ -191,8 +222,12 @@ nav {
 	margin: 0 0 9%;
 }
 
+.cv {
 
-// ANOMATION
+}
+
+
+// ANIMATION
 // -----------------------------
 
 @for $i from 1 through 3 {

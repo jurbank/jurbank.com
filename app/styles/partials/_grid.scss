@@ -27,12 +27,12 @@ $columns: 12;
 }
 
 
-.j-grid {
+.row {
 	@include row;
 }
 
-.j-column {
-	@include col(3);
+.col {
+	@include col(4);
 	background: #f00;
 	height: 100px;
 }
